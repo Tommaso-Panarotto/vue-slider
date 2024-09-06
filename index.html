@@ -27,12 +27,12 @@
     <div id="app">
         <div class="container">
             <div id="carousel">
-                <i id="prev" class="fa-solid fa-angle-left fa-3x"></i>
+                <i id="prev" class="fa-solid fa-angle-left fa-3x" @click="prevSlideImages()"></i>
                 <div id="gallery">
                     <!--immagini-->
                     <img :src="images[activeIndex].image" alt="image">
                 </div>
-                <i id="next" class="fa-solid fa-angle-right fa-3x"></i>
+                <i id="next" class="fa-solid fa-angle-right fa-3x" @click="nextSlideImages()"></i>
             </div>
         </div>
 
