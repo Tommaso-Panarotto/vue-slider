@@ -40,6 +40,12 @@ createApp({
         },
         prevSlideImages() {
             this.activeIndex === 0 ? this.activeIndex = this.images.length - 1 : this.activeIndex--;
+        },
+        cycleSlider() {
+            setInterval(() => { this.nextSlideImages() }, 3000)
         }
+    },
+    mounted() {
+        this.cycleSlider()
     }
 }).mount('#app');
