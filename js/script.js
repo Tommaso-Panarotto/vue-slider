@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             activeIndex: 0,
+            next: '',
             images: [
                 {
                     image: 'img/01.webp',
@@ -42,7 +43,10 @@ createApp({
             this.activeIndex === 0 ? this.activeIndex = this.images.length - 1 : this.activeIndex--;
         },
         cycleSlider() {
-            setInterval(() => { this.nextSlideImages() }, 3000)
+            this.next = setInterval(() => { this.nextSlideImages() }, 3000);
+        },
+        stopCycleSlider() {
+            clearInterval(this.next);
         }
     },
     mounted() {

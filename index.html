@@ -25,7 +25,7 @@
 
     <!--APP-->
     <div id="app" class="container">
-        <div id="carousel">
+        <div id="carousel" @mouseover="stopCycleSlider()" @mouseleave="cycleSlider()">
             <div class="info-game text-center py-5">
                 <h1 id="title">{{images[activeIndex].title}}</h1>
                 <p>{{images[activeIndex].text}}</p>
