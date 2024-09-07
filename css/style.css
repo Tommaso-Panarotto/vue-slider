@@ -1,13 +1,16 @@
 /*Carousel*/
-
 #carousel {
     height: 500px;
     width: 100%;
     margin: 20px auto;
-    position: relative;
 }
 
 #carousel #gallery {
+    height: 100%;
+    position: relative;
+}
+
+#gallery .slide {
     height: 100%;
     text-align: center;
 }

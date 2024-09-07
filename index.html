@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -24,20 +24,26 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!--APP-->
-    <div id="app">
-        <div class="container">
-            <div id="carousel">
+    <div id="app" class="container">
+        <div id="carousel">
+            <div class="info-game text-center py-5">
+                <h1 id="title">{{images[activeIndex].title}}</h1>
+                <p>{{images[activeIndex].text}}</p>
+            </div>
+            <div id="gallery">
+                <!--prev button-->
                 <i id="prev" class="fa-solid fa-angle-left fa-3x" @click="prevSlideImages()"></i>
-                <div id="gallery">
-                    <!--immagini-->
+                <!--immagini-->
+                <div class="slide">
                     <img :src="images[activeIndex].image" alt="image">
                 </div>
+                <!--next button-->
                 <i id="next" class="fa-solid fa-angle-right fa-3x" @click="nextSlideImages()"></i>
             </div>
         </div>
-
-        <!--JS-->
-        <script src="js/script.js"></script>
+    </div>
+    <!--JS-->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
