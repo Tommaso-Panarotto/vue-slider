@@ -45,7 +45,8 @@
             <div id="thumbnails">
                 <!--little slide-->
                 <ul>
-                    <li v-for="(image, index) in images" :class="(index===activeIndex)?'active':'choose'">
+                    <li v-for="(image, index) in images" @click="activeIndex=index"
+                        :class="(index===activeIndex)?'active':'choose'">
                         <img :src="images[index].image" :alt="images[index].title">
                     </li>
                 </ul>
