@@ -40,6 +40,6 @@ createApp({
         },
         prevSlideImages() {
             this.activeIndex === 0 ? this.activeIndex = this.images.length - 1 : this.activeIndex--;
-        },
+        }
     }
 }).mount('#app');

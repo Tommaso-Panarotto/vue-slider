@@ -1,3 +1,11 @@
+/*General*/
+ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 /*Carousel*/
 #carousel {
     height: 500px;
@@ -46,7 +54,7 @@
     justify-content: space-between;
 }
 
-#thumbnails img {
+#thumbnails li {
     height: 100px;
     border-radius: 10px;
 }

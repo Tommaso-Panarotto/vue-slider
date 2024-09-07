@@ -44,7 +44,11 @@
             <!--Thumbnails-->
             <div id="thumbnails">
                 <!--little slide-->
-                <img :src="images[index].image" alt="image" class="choose" v-for="(image, index) in images">
+                <ul>
+                    <li v-for="(image, index) in images" :class="(index===activeIndex)?'active':'choose'">
+                        <img :src="images[index].image" :alt="images[index].title">
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
