@@ -40,6 +40,12 @@
                 <!--next button-->
                 <i id="next" class="fa-solid fa-angle-right fa-3x" @click="nextSlideImages()"></i>
             </div>
+
+            <!--Thumbnails-->
+            <div id="thumbnails">
+                <!--little slide-->
+                <img :src="images[index].image" alt="image" class="choose" v-for="(image, index) in images">
+            </div>
         </div>
     </div>
     <!--JS-->
